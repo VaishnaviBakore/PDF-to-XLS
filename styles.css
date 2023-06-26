@@ -35,12 +35,39 @@ h2{
 }
 .fileInp{
     display: none;
-    
 }
+    
+
 .filelabel{
   cursor: pointer;
     text-decoration: underline;
 }
 .btn{
   background-color: rgb(41, 91, 137);;
+}
+
+.red-circle {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.blue-circle {
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.green-circle {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.bullets{
+  display: flex;
+  align-items: center;
 }
