@@ -1,44 +1,21 @@
-import React, { useState } from 'react';
-import CloudUploadRoundedIcon from '@mui/icons-material/CloudUploadRounded';
+import React from 'react';
 import './styles.css';
-
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Home from "./components/Home";
+import File from "./components/File";
+import ExtractedData from "./components/ExtractedData";
 
 const App = () => {
-  const [selectedFile, setSelectedFile] = useState(null);
-
-  const handleFileUpload = (event) => {
-    setSelectedFile(event.target.files[0]);
-  };
-
-  const handleFileSubmit = () => {
-    if (selectedFile) {
-      // Perform file upload logic here (e.g., send file to server)
-      console.log('Uploading file:', selectedFile);
-    }
-  };
-
   return (
-    <div>
-      <h2>Upload File</h2>
-      <div className='uploadFile'>
-      <center>
-        <div>
-          <CloudUploadRoundedIcon className='image'/><br></br>
-          <br></br>
-          <input type='file' id='file' className="fileInp" onChange={handleFileUpload}/>
-          <label htmlFor='file' className='filelabel'>
-            Choose file
-          </label>
-          
-        </div>
-        <br></br>
-        <div><button type="button" class="btn btn-primary" onClick={handleFileSubmit}>Upload</button></div>
-        </center>
-      </div>  
-      <div className='download'>
-        <button type="button" class="btn btn-primary"> Download Excel File</button>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Home />} />
+          <Route path="/File" element={<File />} />
+          <Route path="/ExtractedData" element={<ExtractedData />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
