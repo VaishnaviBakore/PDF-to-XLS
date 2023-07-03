@@ -62,7 +62,6 @@ const Form = () => {
       <CheckBox2/>
       
     </form>
-    <button style={{width:"100px",alignItems:'center'}} className="btn" type="submit">Submit</button>
     </div>
   );
 };
