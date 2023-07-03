@@ -42,8 +42,8 @@ export default function DragDropFile() {
   };
 
   return (
-    <div className="container">
-    <p>Upload File</p>
+    <div className="container" style={{height:"100vh"}}>
+    <p>Upload Document</p>
     <form id="form-file-upload" onDragEnter={(e)=>handleDrag(e)} onSubmit={(e) => e.preventDefault()}>
       <input ref={inputRef} type="file" id="input-file-upload" multiple={true} onChange={(e)=>handleChange(e)} />
       <label id="label-file-upload" htmlFor="input-file-upload" className={dragActive ? "drag-active" : "" }>
