@@ -5,6 +5,13 @@
   color: #990011,;
 }
 
+body{
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(204, 188, 188, 0.5);
+  border:solid 0.1px;
+  height: 100%;
+  margin: 30px 30px;
+}
 p {
     font-weight:600;
     font-size: xx-large;
@@ -95,10 +102,10 @@ p {
   display: flex;
   flex-direction: column;
   font-size: small;
-  /* height: 450px; */
+  height: 500px;
   width: 40%;
   padding: 20px;
-  line-height: 20px;
+  line-height: 20px;
 }
 
 .form-inp{
@@ -122,3 +129,8 @@ p {
   transition: color 0.2s ease;
 }
 
+.view-img{
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border: solid 0.5px;
+}
