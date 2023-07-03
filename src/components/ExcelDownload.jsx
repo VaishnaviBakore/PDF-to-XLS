@@ -1,16 +1,16 @@
 import React from 'react';
-import {  useNavigate } from 'react-router-dom';
-
+// import {  useNavigate } from 'react-router-dom';
+import Form from './form';
 import '../App.css';
 
 import image1 from './3rd screen.png';
-import image2 from './download-img.png'
+//import image2 from './download-img.png'
 
 
 export default function View() {
     
     const handleClick = async () => {
-        const filePath = process.env.PUBLIC_URL + '/dummy.xlsx'; // Replace with the actual file path
+        const filePath = process.env.PUBLIC_URL + '/dummy.xlsx'; 
         try {
             const response = await fetch(filePath);
             const fileData = await response.blob();
@@ -18,7 +18,7 @@ export default function View() {
             const fileUrl = URL.createObjectURL(file);
             const link = document.createElement('a');
             link.href = fileUrl;
-            link.download = 'dummy.xlsx'; // Specify the desired filename
+            link.download = 'dummy.xlsx';
             link.click();
             console.log("downloaded");
         }catch(err){
@@ -29,6 +29,7 @@ export default function View() {
     return (
         
         <div className='container'>
+            <p style={{display:"flex", justifyContent:"center"}}>Review Data</p>
             <div className='pdf-image'
             style={{
         display: 'flex',
@@ -36,8 +37,8 @@ export default function View() {
         alignItems: 'center'
       }}
       >
-            <img src={image1} alt='pdf' style={{ marginRight: '100px' }}></img>
-            <img src={image2} alt='pdf'></img>
+            <img className="view-img" src={image1} alt='pdf' style={{ marginRight: '100px', height:'500px', width:'60%' }}></img>
+            <Form />
             </div>
             <button className='btn' onClick={handleClick}>Download AP Bookings</button>
         </div>
