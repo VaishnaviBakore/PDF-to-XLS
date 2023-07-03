@@ -14,6 +14,7 @@ export default function View() {
     return (
         
         <div className='container'>
+        <p style={{display:"flex", justifyContent:"center"}}>Process Data</p>
             <div className='pdf-image'
             style={{
         display: 'flex',
@@ -22,8 +23,8 @@ export default function View() {
         
       }}
       >
-               <img src={image1} alt='pdf' style={{ marginRight: '100px' }}></img><br></br>
-               <img src={image2} alt='pdf'></img>
+               <img src={image1} className="view-img" alt='pdf' style={{ marginRight: '100px', height:'450px' }}></img><br></br>
+               <img src={image2} className="view-img" alt='pdf' style={{height:'450px'}}></img>
 
             </div>
             <button className='btn' onClick={handleClick}>Extract Data</button>
